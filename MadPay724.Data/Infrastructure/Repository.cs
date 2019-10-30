@@ -20,7 +20,7 @@ namespace MadPay724.Data.Infrastructure
         public Repository(DbContext db)
         {
             _db = db;
-            _dbSet = db.Set<TEntity>();
+            _dbSet = _db.Set<TEntity>();
         }
         #endregion ##########
 
@@ -39,8 +39,8 @@ namespace MadPay724.Data.Infrastructure
                 throw new ArgumentException("there is no entity");
             _dbSet.Update(entity);
         }
-        
-        
+
+
         public void Delete(object id)
         {
             var entity = GetById(id);
@@ -48,14 +48,14 @@ namespace MadPay724.Data.Infrastructure
                 throw new ArgumentException("there is no entity");
             _dbSet.Remove(entity);
         }
-        
-        
+
+
         public void Delete(TEntity entity)
         {
             _dbSet.Remove(entity);
         }
-        
-        
+
+
         public void Delete(Expression<Func<TEntity, bool>> where)
         {
             IEnumerable<TEntity> objs = _dbSet.Where(where).AsEnumerable();
@@ -72,14 +72,14 @@ namespace MadPay724.Data.Infrastructure
         {
             return _dbSet.AsEnumerable();
         }
-      
-        
+
+
         public TEntity Get(Expression<Func<TEntity, bool>> where)
         {
             return _dbSet.Where(where).FirstOrDefault();
         }
-    
-        
+
+
         public IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> where)
         {
             return _dbSet.Where(where).AsEnumerable();
@@ -93,25 +93,25 @@ namespace MadPay724.Data.Infrastructure
             await _dbSet.AddAsync(entity);
         }
 
-     
+
         public async Task<TEntity> GetByIdAsync(object id)
         {
             return await _dbSet.FindAsync(id);
         }
-        
-        
+
+
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
-        
-        
+
+
         public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> where)
         {
             return await _dbSet.Where(where).FirstOrDefaultAsync();
         }
-        
-        
+
+
         public async Task<IEnumerable<TEntity>> GetManyAsync(Expression<Func<TEntity, bool>> where)
         {
             return await _dbSet.Where(where).ToListAsync();

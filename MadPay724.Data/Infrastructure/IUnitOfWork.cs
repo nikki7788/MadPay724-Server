@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MadPay724.Data.Repositories.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +13,9 @@ namespace MadPay724.Data.Infrastructure
     /// <typeparam name="TContext"></typeparam>
   public  interface IUnitOfWork<TContext> :IDisposable where TContext : DbContext 
     {
+        IUserRepository UserRepository { get; }
+
+
         void Save();
         Task<int> SaveAsync();
     }

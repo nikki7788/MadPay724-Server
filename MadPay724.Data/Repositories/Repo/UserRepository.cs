@@ -14,7 +14,7 @@ namespace MadPay724.Data.Repositories.Repo
         #region ############## Dependencies ###############
 
         private readonly DbContext _db;
-        public UserRepository(DbContext db) : base(db)
+        public UserRepository(DbContext dbContext) : base(dbContext)
         {
             _db = (_db ?? (MadpayDbContext)_db);
         }

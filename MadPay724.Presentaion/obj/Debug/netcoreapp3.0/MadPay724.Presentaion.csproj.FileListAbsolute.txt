@@ -227,10 +227,10 @@ E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\bin\Debug\netcoreapp3.0\MadPa
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.csprojAssemblyReference.cache
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\staticwebassets\MadPay724.Presentaion.StaticWebAssets.Manifest.cache
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\staticwebassets\MadPay724.Presentaion.StaticWebAssets.xml
-E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.MvcApplicationPartsAssemblyInfo.cache
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.AssemblyInfoInputs.cache
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.AssemblyInfo.cs
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.RazorTargetAssemblyInfo.cache
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.csproj.CopyComplete
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.dll
 E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.pdb
+E:\Asp Proj\MadPay724-Server\MadPay724.Presentaion\obj\Debug\netcoreapp3.0\MadPay724.Presentaion.MvcApplicationPartsAssemblyInfo.cache

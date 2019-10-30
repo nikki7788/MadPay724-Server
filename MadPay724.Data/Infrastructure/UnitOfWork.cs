@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MadPay724.Data.Repositories.Interface;
+using MadPay724.Data.Repositories.Repo;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,7 +12,7 @@ namespace MadPay724.Data.Infrastructure
     /// 
     /// </summary>
     /// <typeparam name="TContext"></typeparam>
-    public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext,new()
+    public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : DbContext, new()
     {
         #region ######### Dependencies ############
 
@@ -22,6 +24,25 @@ namespace MadPay724.Data.Infrastructure
         #endregion ########
 
         #region ########## Methods##############
+
+        #region ************Private Repository**********
+
+        private IUserRepository userRepository;
+
+        public IUserRepository UserRepository
+        {
+
+            get
+            {
+                if (userRepository == null)
+                {
+                    userRepository = new UserRepository(_db);
+                }
+                return userRepository;
+            }
+        }
+
+        #endregion
 
 
         #region ****save******
